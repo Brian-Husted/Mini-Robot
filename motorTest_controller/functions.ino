@@ -7,6 +7,16 @@ void onConnect(){
   pixels.show();
 }
 
+void onDisconnect(){
+  Serial.println("Disconnected.");
+
+  //stop motors
+  Front_Right(0);
+  Back_Right(0);
+  Back_Left(0);
+  Front_Left(0);
+}
+
 void notify(){
   // Get Joystick values
   rightX = (Ps3.data.analog.stick.rx);

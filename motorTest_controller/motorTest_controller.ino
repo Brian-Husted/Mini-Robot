@@ -21,6 +21,7 @@ void setup(){
   //initilize bluetooth connection
   Ps3.attach(notify);
   Ps3.attachOnConnect(onConnect);
+  Ps3.attachOnDisconnect(onDisconnect);
   Ps3.begin("20:00:00:00:34:14");  //modify to match MAC address on controller
 
   //initilize LEDs
